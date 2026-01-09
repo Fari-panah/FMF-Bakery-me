@@ -1,0 +1,75 @@
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the left */
+    padding: 2rem;
+    background-color: #1a1a1a; /* Fallback color if image is not loaded */
+    color: #fff;
+    position: relative;
+    background-image: url('../assets/Images/hero.png');
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    height: 100vh; /* Make the hero section full screen */
+  }
+  
+  .hero-content {
+    text-align: left; /* Align text to the left */
+    max-width: 50%; /* Control the width of the content */
+    z-index: 2;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: #f08a4b; /* Accent color */
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .hero-btn {
+    background-color: #f08a4b;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-btn:hover {
+    background-color: #d47339; /* Darker accent color */
+  }
+  
+  /* Background Overlay (Optional for style) */
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("pattern-overlay.png"); /* Optional decorative overlay */
+    opacity: 0.3;
+    z-index: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-content {
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
+  
