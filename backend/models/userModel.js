@@ -27,21 +27,12 @@
         type: String,
         required: true,
       },
-      phone_number: {
+      phone: {
         type: String,
-        required: true,
       },
-      gender: {
+      address: {
         type: String,
-        required: true,
-      },
-      date_of_birth: {
-        type: Date,
-        required: true,
-      },
-      membership_status: {
-        type: String,
-        required: true,
+
       },
     },
     { timestamps: true }

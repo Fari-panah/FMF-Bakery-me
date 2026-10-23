@@ -1,6 +1,6 @@
 const User = require("../models/userModel");
 const mongoose = require("mongoose");
-
+const bcrypt = require("bcrypt")
 // GET /users
 const getAllUsers = async (req, res) => {
   try {
@@ -12,11 +12,31 @@ const getAllUsers = async (req, res) => {
 };
 // add to database
 // POST /users
-//user.create(name, email, phone, address,...)
 const createUser = async (req, res) => {
   try {
-    const newUser = await User.create({ ...req.body });
-    res.status(201).json(newUser);
+    const {name, email, phone, address, password, confirmPassword } = req.body
+    if(!name || !email || !password) {
+      return res.status(400).json({"message": "username, email and password are required!"})
+
+    }
+    if (password !== confirmPassword) {
+    return res.status(400).json({
+      message: 'Passwords do not match',
+    })
+  }
+  const saltRounds = 10
+  const passwordHash = await bcrypt.hash(password, saltRounds)
+
+  const user = new User({
+    name,
+    email,
+    phone,
+    address,
+    passwordHash
+  })
+  const savedUser = await user.save()
+  res.status(201).json(savedUser)
+    
   } catch (error) {
     res
       .status(400)
