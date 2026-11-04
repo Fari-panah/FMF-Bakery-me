@@ -15,8 +15,8 @@ function SignUp() {
     const handleFormSubmit = async (e) => {
       e.preventDefault();
       //console.log(name, email, address, phone, password, confirmPassword);
-      const user = {name, email, address, phone, password, confirmPassword,};//are keys property thats valus come from somewhere else
-      const response = await fetch(REACT_APP_API_URL, {
+      const user = {name, email, address, phone, password, confirmPassword,};
+      const response = await fetch(`${REACT_APP_API_URL}/api/users`, {
         method: "POST",
         body: JSON.stringify(user),
         headers: {
@@ -25,7 +25,8 @@ function SignUp() {
       });
       const json = await response.json();
       if (!response.ok) {
-        console.log("Error");
+        console.log("Error:", json);
+        return;
       }
       if (response.ok) {
         setName("");
