@@ -1,0 +1,71 @@
+/*-----------------------login---------------*/
+/* styles.css */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('./assets/Images/bg-login.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .login-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .login-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .login-container label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .login-container button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to right, #c56cf0, #5b69e9);
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .login-container button:hover {
+    background: linear-gradient(to right, #b04be0, #4c59d6);
+  }
+  
+  .login-container p {
+    margin-top: 10px;
+  }
+  
+  .login-container .signup-link {
+    color: #5b69e9;
+    text-decoration: none;
+  }
+  
+  .login-container .signup-link:hover {
+    text-decoration: underline;
+  }
+  
+  
+
+  

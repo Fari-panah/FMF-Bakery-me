@@ -1,16 +1,9 @@
 import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate, Link} from "react-router-dom";
 import { REACT_APP_API_URL } from "../apiConfig";
-
+import "./SignUP.css"
 function SignUp() {
-  {/*} { const [newUser, setNewUser] = useState({
-        name: "",
-        email: "",
-        address: "",
-        phone: "",
-        password: "",
-        confirmPassword: "",
-    })}  */}
+    const navigate = useNavigate()
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [address, setAddress] = useState("");
@@ -91,9 +84,9 @@ function SignUp() {
                         onChange={(e) => setConfirmPassword(e.target.value)} 
                     />
 
-                    <button type="submit" className="submit-btn">Submit</button>
+                    <button type="submit" className="submit-btn">Sign Up</button>
                 </form>
-                <p>Have an account? <a href="/login" className="login-link">Login</a></p>
+                <p>Have an account? <Link to="/login" className="login-link">Login</Link></p>
             </div>
         </div>
     </div>
