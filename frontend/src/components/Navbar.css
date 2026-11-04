@@ -45,3 +45,25 @@
   .icons i:hover {
     color: #f08a4b; /* Accent color */
   }
+
+  @media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 0.8rem;
+  }
+
+  .nav-links li a {
+    font-size: 0.9rem;
+  }
+
+  .icons i {
+    font-size: 1.2rem;
+  }
+
+  .logo img {
+    width: 70px;
+  }
+}
