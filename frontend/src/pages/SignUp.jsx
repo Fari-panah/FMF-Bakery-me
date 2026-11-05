@@ -36,7 +36,7 @@ function SignUp() {
         setPassword("");
         setConfirmPassword("");
         console.log("new user added:", json);
-        navigate("/");
+        navigate("/login");
 
   }};
   return (

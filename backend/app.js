@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors');
 const productRouter = require("./routes/productRouter");
 const userRouter = require("./routes/userRouter");
+const loginRouter = require("./routes/loginRouter")
 const {
     unknownEndpoint,
     errorHandler,
@@ -31,6 +32,7 @@ app.use(express.json());
 app.use("/api/products", productRouter);
 // Use the userRouter for all /users routes
 app.use("/api/users", userRouter);
+app.use("/api/login", loginRouter)
 // Use the unknownEndpoint middleware for handling undefined routes
 app.use(unknownEndpoint);
 // Use the errorHandler middleware for handling errors

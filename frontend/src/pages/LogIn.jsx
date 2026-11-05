@@ -1,14 +1,36 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { REACT_APP_API_URL } from "../apiConfig";
 import "./LogIn.css"
 
 const Login = () => {
+  const navigate = useNavigate()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    console.log(email, password);
+    const response = await fetch(`${REACT_APP_API_URL}/api/login`, {
+      method: "POST",
+      body: JSON.stringify({
+          email,
+          password
+        }),
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+     const json = await response.json();
+      if (!response.ok) {
+        console.log("Error:", json);
+        return;
+      }
+      if (response.ok) {
+        localStorage.setItem("user", JSON.stringify(json));
+        setEmail("")
+        setPassword("")
+        navigate("/")
+      }
   };
 
   return (
