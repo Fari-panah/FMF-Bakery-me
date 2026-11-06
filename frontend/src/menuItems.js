@@ -123,8 +123,8 @@ const menu = [
         title: 'Fruit Cake',
         category: 'Cake',
         price: 12.99,
-        img: img14,
-        desc: 'The combination of flavors and textures—smooth cream, light cake, and a burst of sweet, tangy fruit—just screams summer.',
+        image: img14,
+        description: 'The combination of flavors and textures—smooth cream, light cake, and a burst of sweet, tangy fruit—just screams summer.',
       },
 
   ];

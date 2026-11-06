@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import Categories from "./Categories";
 import ItemInfo from "./ItemInfo";
 import menu from "../menuItems";

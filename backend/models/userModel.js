@@ -34,6 +34,11 @@
         type: String,
 
       },
+      role: {
+        type: String,
+        enum: ["customer", "admin"],
+        default: "customer",
+      },
     },
     { timestamps: true }
   );

@@ -1,5 +1,3 @@
-import React from "react";
-
 const Categories = ({ categories, filterItems }) => {
   return (
     <div className="categories-container">
