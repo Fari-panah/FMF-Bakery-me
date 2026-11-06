@@ -59,9 +59,9 @@ const updateProduct = async (req, res) => {
   }
 
   try {
-    const updatedProduct = await Product.findOneAndUpdate(
-      { _id: productId },
-      { ...req.body },
+    const updatedProduct = await Product.findByIdAndUpdate(
+      productId,
+      req.body,
       { new: true }
     );
     if (updatedProduct) {
@@ -81,9 +81,8 @@ const deleteProduct = async (req, res) => {
   if (!mongoose.Types.ObjectId.isValid(productId)) {
     return res.status(400).json({ message: "Invalid Product ID" });
   }
-
   try {
-    const deletedProduct = await Product.findOneAndDelete({ _id: productId });
+    const deletedProduct = await Product.findByIdAndDelete({productId});
     if (deletedProduct) {
       res.status(204).json({ message: "Product deleted successfully" });
     } else {

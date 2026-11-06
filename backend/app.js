@@ -11,10 +11,6 @@ const {
 const connectDB = require("./config/db");//Needed For: Connecting your backend to a database.
 
 
-
-//const morgan = require("morgan");
-//app.use(morgan("dev"));
-
 //This line loads environment variables from a .env file into process.env.
 //  It allows you to store sensitive information (like database credentials, 
 // API keys) separately from your code.
