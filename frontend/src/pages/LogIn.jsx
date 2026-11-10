@@ -20,16 +20,20 @@ const Login = () => {
         "Content-Type": "application/json",
       }
     })
-     const json = await response.json();
+     const user = await response.json();
       if (!response.ok) {
-        console.log("Error:", json);
+        console.log("Error:", user);
         return;
       }
       if (response.ok) {
-        localStorage.setItem("user", JSON.stringify(json));
+        localStorage.setItem("user", JSON.stringify(user));
         setEmail("")
         setPassword("")
-        navigate("/")
+        if (user.role === "admin") {
+          navigate("/admin/dashboard");
+        } else {
+          navigate("/");
+        }
       }
   };
 

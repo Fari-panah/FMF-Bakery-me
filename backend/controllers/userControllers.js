@@ -32,7 +32,8 @@ const createUser = async (req, res) => {
     email,
     phone,
     address,
-    passwordHash
+    passwordHash,
+    role: "customer"
   })
   const savedUser = await user.save()
   res.status(201).json(savedUser)
