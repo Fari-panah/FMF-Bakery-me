@@ -3,6 +3,10 @@ const app = express();
 const cors = require('cors');
 const productRouter = require("./routes/productRouter");
 const userRouter = require("./routes/userRouter");
+const cartRouter = require("./routes/cartRouter")
+const checkoutRouter = require("./routes/checkoutRouter")
+const orderRouter = require("./routes/orderRouter")
+const adminRouter = require("./routes/adminRouter")
 const loginRouter = require("./routes/loginRouter")
 const {
     unknownEndpoint,
@@ -24,11 +28,17 @@ app.use(cors());//allows backend communicate with frontend
 
 // Middleware to parse JSON
 app.use(express.json());
-// Use the productRouter for all "/products" routes
-app.use("/api/products", productRouter);
-// Use the userRouter for all /users routes
-app.use("/api/users", userRouter);
+// API Routes
+app.use("/api/products", productRouter)
+app.use("/api/users", userRouter)
 app.use("/api/login", loginRouter)
+app.use("/api/cart",cartRouter )
+app.use("/api/checkout", checkoutRouter)
+app.use("/api/orders", orderRouter )
+//admin routes
+app.use("/api/admin/users", adminRouter)
+
+
 // Use the unknownEndpoint middleware for handling undefined routes
 app.use(unknownEndpoint);
 // Use the errorHandler middleware for handling errors

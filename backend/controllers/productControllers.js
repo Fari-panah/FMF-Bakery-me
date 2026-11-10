@@ -92,6 +92,19 @@ const deleteProduct = async (req, res) => {
     res.status(500).json({ message: "Failed to delete Product" });
   }
 };
+const getBestSeller = async(req, res) => {
+  try {
+    const bestSeller = await Product.findOne().sort({ rating: -1 }).limit(5)//findOne:returns the first product MongoDB finds
+    if (bestSeller) {
+      res.status(200).json(bestSeller)
+    }else {
+      res.status(404).json({message: "No best seller found"})
+    }
+  } catch (error) {
+    res.status(500).json({error: error.message})
+    
+  }
+}
 
 module.exports = {
   getAllProducts,
@@ -99,4 +112,5 @@ module.exports = {
   createProduct,
   updateProduct,
   deleteProduct,
+  getBestSeller
 };

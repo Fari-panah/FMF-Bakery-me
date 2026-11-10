@@ -1,12 +1,3 @@
-/* {
-  "name": "Matti Seppänen",
-  "email": "matti@example.com",
-  "password": "M@45mtg$",
-  "phone_number": "+358401234567",
-  "gender": "Male",
-  "date_of_birth": "2000-01-15",
-  "membership_status": "Active"
-} */
 
   const mongoose = require("mongoose");
 
@@ -42,6 +33,13 @@
     },
     { timestamps: true }
   );
+  orderSchema.set('toJSON', {
+  transform: (document, returnedObject) => {
+    returnedObject.id = returnedObject._id.toString()
+    delete returnedObject._id
+    delete returnedObject.__v
+  }
+})
   
   module.exports = mongoose.model("User", userSchema);
   
