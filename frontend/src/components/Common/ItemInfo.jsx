@@ -6,9 +6,9 @@ const ItemInfo = ({ item, onClose }) => {
         <button className="close-btn" onClick={onClose}>
           &times;
         </button>
-        <img src={item.image} alt={item.name} className="item-info-img" />
-        <h3 className="item-info-title">{item.name}</h3>
-        <p className="item-info-desc">{item.description}</p>
+        <image src={item.image} alt={item.name} className="item-info-image" />
+        <h3 className="item-info-name">{item.name}</h3>
+        <p className="item-info-description">{item.descriptionription}</p>
         <p className="item-info-price">${item.price.toFixed(2)}</p>
         <button className="add-to-cart-btn">Add to Cart</button>
       </div>

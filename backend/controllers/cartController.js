@@ -59,7 +59,7 @@ const addToCart = async (req, res) => {
       cart.products.push({
         productId: product._id,
         itemPrice: product.price,
-        itemDescription: product.description,
+        itemdescriptionription: product.descriptionription,
         quantity,
       });
     }

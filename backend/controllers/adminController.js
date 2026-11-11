@@ -1,4 +1,4 @@
-const User = require("../models/userModel")
+const User = require("../models/userModel.js")
 
 
 //get users, only admin 
@@ -30,6 +30,8 @@ const createUser = async (req, res) => {
         })
         
     } catch (error) {
+        console.log(error)
         
     }
 }
+module.exports = { createUser, getUsers }

@@ -14,13 +14,13 @@ const getAllProducts = async (req, res) => {
 // POST /products
 const createProduct = async (req, res) => {
   try {
-    const {name, price, image, category, description} = req.body
+    const {name, price, image, category, descriptionription} = req.body
     const product = new Product({
       name, 
       price, 
       image, 
       category, 
-      description,
+      descriptionription,
 
     })
     const createdProduct = await product.save()

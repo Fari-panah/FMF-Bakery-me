@@ -1,24 +1,20 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Menu from "./components/Menu";
-import Footer from "./components/Footer";
+import Profile from "./pages/Profile"
 import SignUp from "./pages/SignUp"
 import LogIn from "./pages/LogIn"
+import UserLayout from "./components/UserLayout/UserLayout";
 function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={
-        <>
-        <Navbar />
-        <Hero />
-        <Menu />
-        <Footer />
-        </>
-      }/>
-      <Route path="/signup" element={<SignUp />}/>
-      <Route path="/login" element={<LogIn />} />
+      <Route path="/" element={<UserLayout />}>
+        <Route path="/signup" element={<SignUp />}/>
+        <Route path="/login" element={<LogIn />} />
+        <Route path="profile" element={<Profile />}/>
+
+      </Route>
+      
+      
     </Routes>
   </BrowserRouter>
   )

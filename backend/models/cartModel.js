@@ -12,7 +12,7 @@ const cartItemSchema = new Schema(
       type: Number,
       required: true,
     },
-    itemDescription: {
+    itemdescriptionription: {
       type: String,
     },
     quantity: {

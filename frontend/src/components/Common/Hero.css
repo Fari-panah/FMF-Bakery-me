@@ -20,13 +20,13 @@
     z-index: 2;
   }
   
-  .hero-subtitle {
+  .hero-subname {
     font-size: 1.5rem;
     color: #f08a4b; /* Accent color */
     margin-bottom: 0.5rem;
   }
   
-  .hero-title {
+  .hero-name {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;

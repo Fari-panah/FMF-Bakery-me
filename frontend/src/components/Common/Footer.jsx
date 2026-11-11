@@ -6,7 +6,7 @@ const Footer = () => {
       <footer className="footer">
         {/* Top section with logo & social icons */}
         <div className="footer-top">
-          <img src={logo} alt="Bakery Logo" className="footer-logo" />
+          <image src={logo} alt="Bakery Logo" className="footer-logo" />
           <div className="social-icons">
             <p>Follow us</p>
             <i className="fab fa-facebook-f"></i>

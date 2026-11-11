@@ -1,0 +1,209 @@
+/*.cart-container {
+  position: fixed;  
+  top: 80px;
+  right: 20px;
+  width: 350px;
+  background: #505050;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-button {
+  background: rgb(214, 7, 7);
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  padding: 10px 0;
+}
+
+.cart-item image {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.cart-item-details {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.quantity-btn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(237, 234, 239);
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.quantity-number {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  min-width: 30px;
+}
+
+.remove-button {
+  background: transparent;
+  border: none;
+  color: rgb(232, 120, 120);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.subtotal {
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(252, 250, 250);
+}
+
+.cart-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-buttons button {
+  background: rgb(201, 95, 2);
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white; }*/
+
+  .cart-container {
+    position: fixed;  
+    top: 80px;
+    right: 20px;
+    width: 350px;
+    background: #505050;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+ 
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+ 
+  .close-button {
+    background: rgb(214, 7, 7);
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+ 
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    padding: 10px 0;
+  }
+ 
+  .cart-item image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+   
+  }
+ 
+  .cart-item-details {
+    flex: 1;
+    margin-left: 10px;
+    font-size: 28px;
+  }
+ 
+  .cart-item-details h3 {
+    font-size: 15px; /* Adjust this size as needed */
+    font-weight: bold;
+    margin-bottom: 10px;
+   
+  }
+ 
+  /* ✅ Fix: Align + and - buttons side by side */
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* ✅ Adds spacing between buttons */
+  }
+ 
+  .quantity-btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(237, 234, 239);
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+  }
+ 
+  .quantity-number {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 30px;
+  }
+ 
+  .remove-button {
+    background: transparent;
+    border: none;
+    color: rgb(232, 120, 120);
+    font-size: 16px;
+    cursor: pointer;
+  }
+ 
+  .subtotal {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(252, 250, 250);
+  }
+ 
+  .cart-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+ 
+  .cart-buttons button {
+    background: rgb(201, 95, 2);
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+  }
